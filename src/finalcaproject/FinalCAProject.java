@@ -8,13 +8,14 @@ package finalcaproject;
  *
  * @author reg05
  */
-public class FinalCAProject {
+import java.util.ArrayList;
 
-    /**
-     * @param args the command line arguments
-     */
+public class CustomerDiscountGenerator {
     public static void main(String[] args) {
-        // TODO code application logic here
+        String inCustomerFile = "C:\\Users\\reg05\\CCT\\customers.txt";
+        String outCustomerFile = "C:\\Users\\reg05\\CCT\\customersdiscount.txt";
+
+        ArrayList<Customer> customers = fileHandler.readCustomers(inCustomerFile);
+        fileHandler.writeDiscountedCustomers(customers, outCustomerFile);
     }
-    
 }
